@@ -1,0 +1,27 @@
+{
+  "name": "showtime_backend_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pkg": "rm -rf ./build/* && pkg --out-path ./build/ package.json",
+    "start-mac": "node index.js --com /dev/tty.SLAB_USBtoUART",
+    "start-win": "node index.js --com COM1"
+  },
+  "author": "seeed",
+  "license": "ISC",
+  "dependencies": {
+    "onoff": "^6.0.1",
+    "serialport": "^9.0.0",
+    "socket.io": "^2.3.0",
+    "websocket": "^1.0.31"
+  },
+  "pkg": {
+    "scripts": "index.js"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.9"
+  }
+}

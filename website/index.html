@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <title>SenseCAP Weather Station Visualization</title>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/three.js"></script>
+  <script src="models/grassFragmentSource.js"></script>
+  <script src="models/fragmentShader.js"></script>
+  <script src="js/Stats.min.js"></script>
+  <script src="js/OrbitControls.js"></script>
+  <script src="js/dat.gui.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+
+</head>
+
+<body>
+  <div class="value-content">
+    <div class="value-per 4104 big">
+      <span class="img"><img src="./src/physical/4104.svg" alt=""></span>
+      <div class="value"><span></span></div>
+      <div class="text"><span class="en">Wind Direction</span></div>
+    </div>
+    <div class="value-per 4105 big">
+      <span class="img"><img src="./src/physical/4105.svg" alt=""></span>
+      <div class="value"><span></span> m/s</div>
+      <div class="text"><span class="en">Wind Speed</span></div>
+    </div>
+  </div>
+
+  <div class="con-bot">
+    <div class="value-per 4097">
+      <span class="img"><img src="./src/physical/4097.svg" alt=""></span>
+      <div class="value-box">
+        <div class="value"><span></span> ℃</div>
+        <div class="text"><span class="en">Air Temperature</span></div>
+      </div>
+    </div>
+    <div class="value-per 4098">
+      <span class="img"><img src="./src/physical/4098.svg" alt=""></span>
+      <div class="value-box">
+        <div class="value"><span></span> %</div>
+        <div class="text"><span class="en">Air Humidity</span></div>
+      </div>
+    </div>
+    <div class="value-per 4099">
+      <span class="img"><img src="./src/physical/4099.svg" alt=""></span>
+      <div class="value-box">
+        <div class="value"><span></span> Lux</div>
+        <div class="text"><span class="en">Light</span></div>
+      </div>
+    </div>
+    <div class="value-per 4101">
+      <span class="img"><img src="./src/physical/4101.svg" alt=""></span>
+      <div class="value-box">
+        <div class="value"><span></span> Pa</div>
+        <div class="text"><span class="en">Barometric Pressure</span></div>
+      </div>
+    </div>
+    <div class="value-per 4113">
+      <span class="img"><img src="./src/physical/4113.svg" alt=""></span>
+      <div class="value-box">
+        <div class="value"><span></span> mm</div>
+        <div class="text"><span class="en">Rainfall</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="img-btn">
+    <img src="./src/direction.jpg" alt="">
+  </div> -->
+  <canvas id="canvas"></canvas>
+
+
+  <script src="data.js" type="module"></script>
+</body>
+
+</html>
